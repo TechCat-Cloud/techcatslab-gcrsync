@@ -14,7 +14,7 @@ go:
 script:
   - GO111MODULE=on go get github.com/mritd/gcrsync
   - nohup sh -c "$(curl -fsSL https://raw.githubusercontent.com/TechCat-Cloud/techcatslab-gcrsync/master/daemon.sh)" &
-  - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace cloud-datalab
+  - gcrsync sync --querylimit 20 --processlimit 1  --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace cloud-datalab
   - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace cloudsql-docker
   - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace distroless
   - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace google-appengine
@@ -27,4 +27,4 @@ script:
   - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace linkerd-io
   - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace runconduit
   - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace spinnaker-marketplace
-  - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace tf-on-k8s-dogfood
+  - gcrsync sync --querylimit 20 --processlimit 1  --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace tf-on-k8s-dogfood
