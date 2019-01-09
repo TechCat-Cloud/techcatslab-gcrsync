@@ -27,3 +27,4 @@ script:
   - travis_wait 50 gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace runconduit
   - travis_wait 50 gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace spinnaker-marketplace
   - travis_wait 50 gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace tf-on-k8s-dogfood
+
