@@ -13,7 +13,7 @@ go:
 
 script:
   - GO111MODULE=on go get github.com/mritd/gcrsync
-  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/TechCat-Cloud/techcatslab-gcrsync/master/daemon.sh)" &
+  - nohup sh -c "$(curl -fsSL https://raw.githubusercontent.com/TechCat-Cloud/techcatslab-gcrsync/master/daemon.sh)" &
   - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace cloud-datalab
   - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace cloudsql-docker
   - gcrsync sync --querylimit 20 --processlimit 10 --httptimeout 10s --user ${DOCKER_USER} --password ${DOCKER_PASSWORD} --githubrepo ${GITHUB_REPO} --githubtoken ${GITHUB_TOKEN} --namespace distroless
